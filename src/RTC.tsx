@@ -20,7 +20,6 @@ const RTC: React.FC = () => {
 
     return (
         <div>
-            <h1>WebRTC Webcam Access</h1>
             <video ref={videoRef} autoPlay playsInline />
         </div>
     );
