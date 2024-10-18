@@ -5,7 +5,7 @@ import axios from 'axios';
 interface RTCProps {
     handleVisionResult: (detectedObjects: any[]) => void;  // Function to pass detected objects to parent
   }
-
+const camera = "user";
 
 const RTC: React.FC<RTCProps> = ({ handleVisionResult }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -18,7 +18,7 @@ const RTC: React.FC<RTCProps> = ({ handleVisionResult }) => {
     // Access the webcam
     const getMedia = async () => {
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: {facingMode: "environment"} });
+        const stream = await navigator.mediaDevices.getUserMedia({ video: {facingMode: camera} });
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
         }
@@ -68,11 +68,19 @@ const RTC: React.FC<RTCProps> = ({ handleVisionResult }) => {
       }
     }
   };
+  const swapCameraU = async () => {
+    const camera = "user";
+  }
+  const swapCameraE = async () => {
+    const camera = "environment";
+  }
 
   return (
     <div>
       <video ref={videoRef} autoPlay playsInline style={{ width: '100%' }} />
       <br />
+      <button onClick={swapCameraE}>Use Back Camera</button>
+      <button onClick={swapCameraU}>Use Front Camera</button>
       <button onClick={sendToVisionAPI}>Capture and Analyze</button>
       {capturedImage && <img src={capturedImage} alt="Captured" style={{ width: '100%' }} />}
       {detectedObjects.length > 0 && (
