@@ -27,7 +27,7 @@ FAIL src/App.test.tsx
 
     Details:
 
-    /home/runner/work/testframe/testframe/node_modules/axios/index.js:1
+    /home/runner/work/testframe1/testframe1/node_modules/axios/index.js:1
     ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){import axios from './lib/axios.js';
                                                                                       ^^^^^^
 
@@ -66,5 +66,5 @@ All files           |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.426 s
+Time:        2.431 s
 Ran all test suites.
