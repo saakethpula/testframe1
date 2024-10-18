@@ -62,7 +62,7 @@ const SpeechToText: React.FC<SpeechToTextProps> = ({ handleTranscript }) => {
       <button onClick={stopListening}>Stop Listening</button>
       <p>{transcript ? `Transcript: ${transcript}` : 'No speech recognized yet.'}</p>
       <h2> Type in what you'd like to find</h2>
-      <input type="text" onChange={(e) => handleTranscript(e.target.value)} />
+      <input type="text" onChange={(e) => setTranscript(e.target.value)} />
     </div>
   );
 };
