@@ -5,14 +5,19 @@ import axios from 'axios';
 interface RTCProps {
     handleVisionResult: (detectedObjects: any[]) => void;  // Function to pass detected objects to parent
   }
-let camera = "user";
 
 const RTC: React.FC<RTCProps> = ({ handleVisionResult }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [capturedImage, setCapturedImage] = useState<string | null>(null);
   const [detectedObjects, setDetectedObjects] = useState<any[]>([]);
   
-
+  let camera = "user";
+  const swapCameraU = async () => {
+    camera = "user";
+  }
+  const swapCameraE = async () => {
+    camera = "environment";
+  }
 
   useEffect(() => {
     // Access the webcam
@@ -68,13 +73,6 @@ const RTC: React.FC<RTCProps> = ({ handleVisionResult }) => {
       }
     }
   };
-  const swapCameraU = async () => {
-    camera = "user";
-  }
-  const swapCameraE = async () => {
-    camera = "environment";
-  }
-
   return (
     <div>
       <video ref={videoRef} autoPlay playsInline style={{ width: '100%' }} />
