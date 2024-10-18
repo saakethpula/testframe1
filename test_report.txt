@@ -55,7 +55,7 @@ File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 --------------------|---------|----------|---------|---------|-------------------
 All files           |       0 |        0 |       0 |       0 |                   
  App.tsx            |       0 |        0 |       0 |       0 | 19-134            
- RTC.tsx            |       0 |        0 |       0 |       0 | 8-101             
+ RTC.tsx            |       0 |        0 |       0 |       0 | 8-90              
  bpoly.ts           |       0 |        0 |       0 |       0 | 9-104             
  index.tsx          |       0 |      100 |     100 |       0 | 7-19              
  movementUtils.ts   |       0 |        0 |       0 |       0 | 6-22              
@@ -66,5 +66,5 @@ All files           |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.482 s
+Time:        2.51 s
 Ran all test suites.
